@@ -1,0 +1,15 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://127.0.0.1:8080
+functions:
+  add-todo:
+    lang: python3-http
+    handler: ./add-todo
+    image: ghcr.io/bhanukapannipitiya/add-todo:latest
+
+  get-todos:
+    lang: python3-http
+    handler: ./get-todos
+    image: ghcr.io/bhanukapannipitiya/get-todos:latest
+
